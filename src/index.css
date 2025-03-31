@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-primary-900 antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold text-primary-900;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl lg:text-6xl mb-6 text-accent-700;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl lg:text-5xl mb-4 text-accent-800;
+  }
+
+  h3 {
+    @apply text-2xl sm:text-3xl lg:text-4xl mb-3 text-primary-900;
+  }
+
+  p {
+    @apply text-lg leading-relaxed mb-4 text-primary-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center px-6 py-3 rounded-lg font-medium transition-all duration-200 ease-in-out;
+  }
+
+  .btn-primary {
+    @apply bg-accent-500 hover:bg-accent-600 text-white shadow-lg hover:shadow-xl border border-accent-400/20;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-500 hover:bg-secondary-600 text-white shadow-lg hover:shadow-xl border border-secondary-400/20;
+  }
+
+  .card {
+    @apply bg-gradient-to-br from-white/40 to-white/30 backdrop-blur-sm rounded-xl p-6 shadow-soft hover:shadow-lg transition-all duration-200 border border-white/40 hover:border-accent-300;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 rounded-lg bg-white/40 border border-primary-200 focus:border-accent-400 focus:ring-2 focus:ring-accent-200 outline-none transition-all duration-200 text-primary-900 placeholder-primary-500;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-primary-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent-400 rounded-full hover:bg-accent-500 transition-colors duration-200;
+}
