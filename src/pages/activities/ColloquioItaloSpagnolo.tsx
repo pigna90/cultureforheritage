@@ -14,12 +14,12 @@ const ColloquioItaloSpagnolo = () => {
   };
 
   const images = [
-    '/images/colloquio_italo_spagnolo/img_20240510_111838.jpg',
-    '/images/colloquio_italo_spagnolo/img_20240510_111909.jpg',
-    '/images/colloquio_italo_spagnolo/img_20240510_111919.jpg',
-    '/images/colloquio_italo_spagnolo/img_20240510_112020.jpg',
-    '/images/colloquio_italo_spagnolo/img_20240510_112024.jpg',
-    '/images/colloquio_italo_spagnolo/img_20240510_112128.jpg',
+    `${process.env.PUBLIC_URL}/images/colloquio_italo_spagnolo/img_20240510_111838.jpg`,
+    `${process.env.PUBLIC_URL}/images/colloquio_italo_spagnolo/img_20240510_111909.jpg`,
+    `${process.env.PUBLIC_URL}/images/colloquio_italo_spagnolo/img_20240510_111919.jpg`,
+    `${process.env.PUBLIC_URL}/images/colloquio_italo_spagnolo/img_20240510_112020.jpg`,
+    `${process.env.PUBLIC_URL}/images/colloquio_italo_spagnolo/img_20240510_112024.jpg`,
+    `${process.env.PUBLIC_URL}/images/colloquio_italo_spagnolo/img_20240510_112128.jpg`,
   ];
 
   return (
@@ -100,7 +100,7 @@ const ColloquioItaloSpagnolo = () => {
             {/* Poster Section */}
             <section className="bg-white rounded-xl shadow-sm overflow-hidden">
           <img 
-            src="/images/colloquio_italo_spagnolo/poster.webp" 
+            src={`${process.env.PUBLIC_URL}/images/colloquio_italo_spagnolo/poster.webp`}
             alt="Colloquio italo-spagnolo poster" 
             className="w-full h-auto"
           />
