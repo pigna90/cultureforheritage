@@ -4,36 +4,14 @@ import { Link } from 'react-router-dom';
 const Activities = () => {
   const activities = [
     {
-      id: "digital-documentation",
-      title: "Digital Documentation Project",
-      period: "2023-2025",
-      description: "A comprehensive project to create high-resolution 3D models of important cultural artifacts using advanced scanning technologies.",
+      id: "colloquio-italo-spagnolo",
+      title: "Colloquio italo-spagnolo",
+      period: "2024",
+      description: "Un importante evento di scambio culturale tra Italia e Spagna, focalizzato sulla conservazione del patrimonio culturale.",
       highlights: [
-        "Development of new scanning methodologies",
-        "Creation of online accessible archives",
-        "Collaboration with multiple museums"
-      ]
-    },
-    {
-      id: "heritage-workshop",
-      title: "Heritage Conservation Workshop Series",
-      period: "Spring 2024",
-      description: "A series of workshops focusing on practical aspects of heritage conservation, combining traditional methods with modern technologies.",
-      highlights: [
-        "Hands-on training sessions",
-        "Expert guest lectures",
-        "Virtual reality demonstrations"
-      ]
-    },
-    {
-      id: "international-conference",
-      title: "International Conference on Digital Heritage",
-      period: "November 2023",
-      description: "A successful conference that brought together experts from around the world to discuss the latest developments in digital heritage preservation.",
-      highlights: [
-        "Over 200 participants from 30 countries",
-        "50+ research presentations",
-        "Publication of proceedings"
+        "Presentazioni di esperti di entrambi i paesi",
+        "Workshop pratici sulla conservazione",
+        "Mostre di artefatti storici"
       ]
     }
   ];
@@ -49,12 +27,6 @@ const Activities = () => {
             </div>
             <p className="text-sm text-primary-600 mb-4">{activity.period}</p>
             <p className="mb-4 text-primary-900">{activity.description}</p>
-            <h3 className="text-xl font-semibold mb-2 text-primary-900">Key Highlights:</h3>
-            <ul className="list-disc list-inside space-y-2 text-primary-900 mb-4">
-              {activity.highlights.map((highlight, highlightIndex) => (
-                <li key={highlightIndex}>{highlight}</li>
-              ))}
-            </ul>
             <Link 
               to={`/activities/${activity.id}`}
               className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium"

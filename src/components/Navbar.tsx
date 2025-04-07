@@ -1,5 +1,3 @@
-'use client';
-
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -9,7 +7,7 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'Project Overview', href: '/project' },
-    { name: 'Objectives', href: '/objectives' },
+    { name: 'Goals', href: '/goals' },
     { name: 'Our Team', href: '/team' },
     { name: 'Activities', href: '/activities' },
   ];
@@ -19,8 +17,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="text-xl font-bold text-primary-900">
-              Culture for Heritage
+            <Link to="/" className="text-2xl font-bold text-primary-900">
+              CroMe
             </Link>
           </div>
 
@@ -30,7 +28,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className="text-primary-700 hover:text-accent-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                className="text-primary-700 hover:text-accent-600 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -62,7 +60,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className="text-primary-700 hover:text-accent-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                className="text-primary-700 hover:text-accent-600 block px-3 py-2 rounded-md text-lg font-medium transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}

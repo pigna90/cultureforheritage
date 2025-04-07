@@ -1,16 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Project from './pages/Project';
-import Objectives from './pages/Objectives';
+import Goals from './pages/Goals';
 import Team from './pages/Team';
 import Activities from './pages/Activities';
 import News from './pages/News';
+import ColloquioItaloSpagnolo from './pages/activities/ColloquioItaloSpagnolo';
 
 const App = () => {
   return (
-    <Router basename="/cultureforheritage">
+    <Router>
       <div className="min-h-screen bg-gradient-to-br from-primary-100 via-secondary-200 to-primary-200">
         <div className="fixed inset-0 bg-gradient-to-b from-white/20 to-white/40 backdrop-blur-sm" />
         <div className="relative">
@@ -21,10 +22,12 @@ const App = () => {
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/project" element={<Project />} />
-                  <Route path="/objectives" element={<Objectives />} />
+                  <Route path="/goals" element={<Goals />} />
                   <Route path="/team" element={<Team />} />
                   <Route path="/activities" element={<Activities />} />
+                  <Route path="/activities/colloquio-italo-spagnolo" element={<ColloquioItaloSpagnolo />} />
                   <Route path="/news" element={<News />} />
+                  <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>
               </div>
             </div>
