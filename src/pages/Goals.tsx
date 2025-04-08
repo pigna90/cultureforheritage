@@ -13,37 +13,25 @@ export default function Goals() {
   ];
 
   return (
-    <div className="text-primary-900 max-w-5xl mx-auto px-4">
-      <h1 className="text-4xl font-bold mb-12 text-center">Our Goals</h1>
-      <div className="space-y-6">
+    <div className="text-primary-900 max-w-5xl mx-auto px-6">
+      <h1 className="text-4xl font-bold mb-8 text-center">Our Goals</h1>
+      <div className="space-y-4">
         {goals.map((goal, index) => (
           <div
             key={index}
-            className={`group relative overflow-hidden rounded-xl transition-all duration-300 ${
-              index % 2 === 0 
-                ? 'bg-white/40 hover:bg-white/50' 
-                : 'bg-primary-50/40 hover:bg-primary-50/50'
-            }`}
+            className="group relative overflow-hidden rounded-lg transition-all duration-300 shadow-sm hover:shadow-md bg-white hover:bg-primary-50 h-auto sm:h-24"
           >
-            <div className="p-6">
-              <div className="flex items-start gap-6">
-                <div className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center font-bold text-xl ${
-                  index % 2 === 0 
-                    ? 'bg-primary-100 text-primary-700' 
-                    : 'bg-white text-primary-600'
-                }`}>
+            <div className="p-4 h-full flex items-center">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 w-full">
+                <div className="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center font-bold text-xl bg-primary-200 text-primary-800">
                   {index + 1}
                 </div>
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg leading-relaxed mt-2 sm:mt-0 sm:my-auto">
                   {goal}
                 </p>
               </div>
             </div>
-            <div className={`absolute inset-0 border-2 rounded-xl transition-opacity duration-300 ${
-              index % 2 === 0 
-                ? 'border-primary-200 opacity-0 group-hover:opacity-100' 
-                : 'border-primary-100 opacity-0 group-hover:opacity-100'
-            }`} />
+            <div className="absolute inset-0 border-2 rounded-lg transition-opacity duration-300 border-primary-300 opacity-0 group-hover:opacity-100" />
           </div>
         ))}
       </div>

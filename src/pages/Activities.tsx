@@ -29,12 +29,9 @@ const Activities = () => {
             <p className="mb-4 text-primary-900">{activity.description}</p>
             <Link 
               to={`/activities/${activity.id}`}
-              className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium"
+              className="text-accent-600 hover:text-accent-700 font-medium"
             >
-              Read more
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+              More →
             </Link>
           </div>
         ))}
