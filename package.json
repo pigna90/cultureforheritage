@@ -2,7 +2,7 @@
   "name": "crome",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://pigna90.github.io/cultureforheritage",
+  "homepage": "https://www.cultureforheritage.com",
   "dependencies": {
     "@heroicons/react": "^2.1.1",
     "@types/node": "^16.18.126",

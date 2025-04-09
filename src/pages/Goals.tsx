@@ -14,7 +14,7 @@ export default function Goals() {
 
   return (
     <div className="text-primary-900 max-w-5xl mx-auto px-6">
-      <h1 className="text-4xl font-bold mb-8 text-center">Our Goals</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center text-accent-700">Our Goals</h1>
       <div className="space-y-4">
         {goals.map((goal, index) => (
           <div
@@ -26,7 +26,7 @@ export default function Goals() {
                 <div className="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center font-bold text-xl bg-primary-200 text-primary-800">
                   {index + 1}
                 </div>
-                <p className="text-lg leading-relaxed mt-2 sm:mt-0 sm:my-auto">
+                <p className="text-lg leading-relaxed mt-2 sm:mt-0 sm:my-auto text-primary-900">
                   {goal}
                 </p>
               </div>

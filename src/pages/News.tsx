@@ -21,7 +21,7 @@ export default function News() {
 
   return (
     <div className="text-primary-900">
-      <h1 className="text-4xl font-bold mb-8">News</h1>
+      <h1 className="text-4xl font-bold mb-8 text-accent-700">News</h1>
       <div className="space-y-8">
         {sortedNews.map((item, index) => (
           <div key={index} className="bg-white/40 backdrop-blur-sm p-6 rounded-lg">

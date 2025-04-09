@@ -1,7 +1,7 @@
 export default function Project() {
   return (
     <div className="text-primary-900">
-      <h1 className="text-4xl font-bold mb-8">Project Overview</h1>
+      <h1 className="text-4xl font-bold mb-8 text-accent-700">Project Overview</h1>
       <div className="bg-white/40 backdrop-blur-sm p-6 rounded-lg">
         <p className="mb-4 text-primary-900">
           The research unit on the project "Culture as a Good and as a Medium: New Categories of
