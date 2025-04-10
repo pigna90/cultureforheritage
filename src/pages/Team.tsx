@@ -3,161 +3,138 @@ export default function Team() {
     {
       name: "Alessandro Romano",
       company: "Kuehne+Nagel",
-      role: "Senior Data Scientist",
       bio: "",
       link: "https://www.aromano.dev"
     },
     {
       name: "Ana Belén Benito Sánchez",
       company: "Complutense University of Madrid",
-      role: "Research Associate",
       bio: "",
       link: "https://produccioncientifica.ucm.es/investigadores/142211/detalle"
     },
     {
       name: "Ana Galán Pérez",
       company: "Complutense University of Madrid",
-      role: "Cultural Heritage Researcher",
       bio: "",
       link: "https://bellasartes.ucm.es/ana-galan-perez"
     },
     {
       name: "Anna María Biedermann",
       company: "University of Zaragoza",
-      role: "Conservation Specialist",
       bio: "",
       link: "https://iphunizar.com/anna-maria-biedermann/"
     },
     {
       name: "Barbara Accettura",
       company: "University of Salento",
-      role: "Archaeological Researcher",
       bio: "",
       link: "https://www.unisalento.it/scheda-utente/-/people/barbara.accettura"
     },
     {
       name: "Carla Maria Saracino",
       company: "University of Salento",
-      role: "Digital Archivist",
       bio: "",
       link: "https://www.unisalento.it/scheda-utente/-/people/carlamaria.saracino"
     },
     {
       name: "Claudia Morini",
       company: "University of Salento",
-      role: "Cultural Heritage Analyst",
       bio: "",
       link: "https://www.unisalento.it/scheda-utente/-/people/claudia.morini"
     },
     {
       name: "Francesca Dell'Anna Misurale",
       company: "University of Salento",
-      role: "Conservation Scientist",
       bio: "",
       link: "https://www.unisalento.it/scheda-utente/-/people/francesca.dellannamisurale"
     },
     {
       name: "Francesco Fabrizio Tuccari",
       company: "University of Salento",
-      role: "Digital Humanities Researcher",
       bio: "",
       link: "https://www.unisalento.it/scheda-utente/-/people/francesco.tuccari"
     },
     {
       name: "Francesco Spera",
       company: "University of Salento",
-      role: "Archaeological Technician",
       bio: "",
       link: "#"
     },
     {
       name: "Gabriella De Giorgi Cezzi",
       company: "University of Salento",
-      role: "Cultural Heritage Manager",
       bio: "",
       link: "https://www.unisalento.it/scheda-utente/-/people/gabriella.degiorgi"
     },
     {
       name: "Giorgio Colacchio",
       company: "University of Salento",
-      role: "Digital Preservation Specialist",
       bio: "",
       link: "https://www.unisalento.it/scheda-utente/-/people/giorgio.colacchio"
     },
     {
       name: "Isabella Salsano",
       company: "University of Salento",
-      role: "Conservation Architect",
       bio: "",
       link: "#"
     },
     {
       name: "Lorenzo Prete",
       company: "University of Salento",
-      role: "Cultural Heritage Consultant",
       bio: "",
       link: "#"
     },
     {
       name: "Marco Brocca",
       company: "University of Salento",
-      role: "Digital Heritage Specialist",
       bio: "",
       link: "https://www.unisalento.it/scheda-utente/-/people/marco.brocca"
     },
     {
       name: "Marco Errico",
       company: "Università degli studi della Campania Luigi Vanvitelli",
-      role: "Cultural Heritage Technologist",
       bio: "",
       link: "#"
     },
     {
       name: "Maria Luisa Tacelli",
       company: "University of Salento",
-      role: "Art Historian",
       bio: "",
       link: "https://www.unisalento.it/scheda-utente/-/people/marialuisa.tacelli"
     },
     {
       name: "Maria Teresa Carballeira Rivera",
       company: "University of Santiago de Compostela",
-      role: "Cultural Heritage Researcher",
       bio: "",
       link: "https://www.usc.gal/es/departamento/derecho-publico-teoria/directorio/maria-teresa-carballeira-rivera-2002"
     },
     {
       name: "Polina Zavershinskaia",
       company: "University of Salento",
-      role: "Digital Heritage Analyst",
       bio: "",
       link: "#"
     },
     {
       name: "Sara Ciccarese",
       company: "University of Salento",
-      role: "Conservation Scientist",
       bio: "",
       link: "#"
     },
     {
       name: "Serena Vergori",
       company: "University of Salento",
-      role: "Cultural Heritage Manager",
       bio: "",
       link: "https://www.unisalento.it/scheda-utente/-/people/serena.vergori"
     },
     {
       name: "Stefano Magnolo",
       company: "University of Salento",
-      role: "Digital Archivist",
       bio: "",
       link: "https://www.unisalento.it/scheda-utente/-/people/stefano.magnolo"
     },
     {
       name: "Vittoria Giannini",
       company: "University of Salento",
-      role: "Cultural Heritage Researcher",
       bio: "",
       link: "#"
     }
@@ -170,8 +147,7 @@ export default function Team() {
         {team.map((member, index) => (
           <div key={index} className="bg-white/40 backdrop-blur-sm p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-1 text-primary-900">{member.name}</h2>
-            <p className="text-lg text-accent-700 mb-1">{member.company}</p>
-            <p className="text-lg text-primary-700 mb-4">{member.role}</p>
+            <p className="text-lg text-accent-700 mb-4">{member.company}</p>
             <p className="mb-4 text-primary-900">{member.bio}</p>
             {member.link === "#" ? (
               <span className="text-gray-400 font-medium cursor-default">

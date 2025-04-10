@@ -24,14 +24,14 @@ const ColloquioItaloSpagnolo = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="max-w-5xl mx-auto px-4 py-12">
+      <div className="w-full px-2 sm:px-6 py-4 sm:py-12">
         {/* Language Switcher */}
-        <div className="fixed right-8 top-8 z-50">
+        <div className="fixed right-2 sm:right-8 top-2 sm:top-8 z-50">
           <div className="bg-white/90 backdrop-blur-sm rounded-full p-1 shadow-sm border border-gray-100">
             <div className="flex items-center space-x-1">
             <button 
               onClick={() => setLanguage('it')}
-                className={`px-3 py-1.5 rounded-full text-base font-medium transition-all duration-200 ${
+                className={`px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-sm sm:text-base font-medium transition-all duration-200 ${
                 language === 'it' 
                     ? 'bg-accent-500 text-white shadow-sm' 
                     : 'text-gray-600 hover:text-accent-500 hover:bg-gray-50'
@@ -42,7 +42,7 @@ const ColloquioItaloSpagnolo = () => {
             </button>
             <button 
               onClick={() => setLanguage('es')}
-                className={`px-3 py-1.5 rounded-full text-base font-medium transition-all duration-200 ${
+                className={`px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-sm sm:text-base font-medium transition-all duration-200 ${
                 language === 'es' 
                     ? 'bg-accent-500 text-white shadow-sm' 
                     : 'text-gray-600 hover:text-accent-500 hover:bg-gray-50'
@@ -55,12 +55,12 @@ const ColloquioItaloSpagnolo = () => {
           </div>
         </div>
         
-        <div className="max-w-5xl mx-auto px-4 py-12">
+        <div className="w-full">
           {/* Header Section */}
-          <div className="mb-12">
+          <div className="mb-6 sm:mb-12">
             <Link 
               to="/activities"
-              className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium mb-6"
+              className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium mb-3 sm:mb-6"
             >
               <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -68,11 +68,11 @@ const ColloquioItaloSpagnolo = () => {
               {language === 'it' ? 'Torna alle Attività' : 'Volver a Actividades'}
             </Link>
             
-            <h1 className="text-4xl font-bold text-primary-900 mb-6">Colloquio italo-spagnolo</h1>
+            <h1 className="text-2xl sm:text-4xl font-bold text-primary-900 mb-3 sm:mb-6">Colloquio italo-spagnolo</h1>
             
             {/* Event Details Card */}
-            <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
-              <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white rounded-lg sm:rounded-xl shadow-sm p-3 sm:p-6 mb-4 sm:mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6">
                 <div>
                   <h3 className="text-sm font-medium text-primary-600 mb-1">
                     {language === 'it' ? 'Data' : 'Fecha'}
@@ -96,19 +96,19 @@ const ColloquioItaloSpagnolo = () => {
           </div>
 
           {/* Main Content */}
-          <div className="space-y-16">
+          <div className="space-y-6 sm:space-y-16">
             {/* Poster Section */}
-            <section className="bg-white rounded-xl shadow-sm overflow-hidden">
-          <img 
-            src={`${process.env.PUBLIC_URL}/images/colloquio_italo_spagnolo/poster.webp`}
-            alt="Colloquio italo-spagnolo poster" 
-            className="w-full h-auto"
-          />
+            <section className="bg-white rounded-lg sm:rounded-xl shadow-sm overflow-hidden">
+              <img 
+                src={`${process.env.PUBLIC_URL}/images/colloquio_italo_spagnolo/poster.webp`}
+                alt="Colloquio italo-spagnolo poster" 
+                className="w-full h-auto"
+              />
             </section>
 
             {/* Description Section */}
-            <section className="prose prose-lg max-w-none">
-              <h2 className="text-2xl font-bold text-primary-900 mb-6">
+            <section className="prose prose-sm sm:prose-lg max-w-none">
+              <h2 className="text-lg sm:text-2xl font-bold text-primary-900 mb-3 sm:mb-6">
                 {language === 'it' 
                   ? 'Paesaggi immateriali. Nuove ecologie e tecnologie per patrimonio culturale'
                   : 'Paisajes inmateriales. Nuevas ecologías y tecnologías para el patrimonio cultural'}
@@ -120,9 +120,9 @@ const ColloquioItaloSpagnolo = () => {
                 Il tema del paesaggio si trova da tempo al centro di dibattiti interdisciplinari riguardanti ambiti tra loro tradizionalmente differenziati. Ambiti ai quali in questi ultimi anni si sono aggiunte discipline che potremmo chiamare ibride, nate dalla rivoluzione delle nuove tecnologie.
               </p>
                 
-                  <blockquote className="border-l-4 border-accent-500 pl-4 italic my-6 text-primary-700 text-lg">
+                  <blockquote className="border-l-4 border-accent-500 pl-3 sm:pl-4 italic my-3 sm:my-6 text-primary-700 text-sm sm:text-lg">
                 "Abbiamo assistito al trionfo del verbo, assistiamo ora a quello della scienza, entrambi forieri di una catastrofe percettiva senza precedenti. Questo squilibrio tra spazio geometrico e paesaggio pone l'urgenza di un terzo stato che ritrovi i primi due come dati, a patto che la veduta locale non sembri un dettaglio da scartare, che la visione globale non sia assunta come la sola legge. Il miracolo di un tale riequilibrio, che ricomponga universo e paesaggio, è la sfida che Serres vede pesare sul nostro destino."
-                    <footer className="text-sm mt-2 text-primary-600">
+                    <footer className="text-xs sm:text-sm mt-2 text-primary-600">
                   Gaspare Polizzi, Michel Serres: i sensi e il mondo, in Spazio e conoscenza nella costruzione dell'ambiente, a cura di Maria Bottero, Franco Angeli 1991, pp. 41-57 (53).
                 </footer>
               </blockquote>
@@ -141,9 +141,9 @@ const ColloquioItaloSpagnolo = () => {
                 El tema del paisaje ha estado durante mucho tiempo en el centro de los debates interdisciplinarios relativos a campos tradicionalmente diferenciados. Ámbitos a los que en los últimos años se han sumado disciplinas que podríamos denominar híbridas, nacidas de la revolución de las nuevas tecnologías.
               </p>
                 
-                  <blockquote className="border-l-4 border-accent-500 pl-4 italic my-6 text-primary-700 text-lg">
+                  <blockquote className="border-l-4 border-accent-500 pl-3 sm:pl-4 italic my-3 sm:my-6 text-primary-700 text-sm sm:text-lg">
                 "Hemos asistido al triunfo del verbo, asistimos ahora al de la ciencia, ambos precursores de una catástrofe perceptiva sin precedentes. Este desequilibrio entre espacio geométrico y paisaje plantea la urgencia de un tercer estado que recupere los dos primeros como datos, siempre que la visión local no parezca un detalle a desechar, que la visión global no se tome como única ley. El milagro de tal reequilibrio, recomponiendo universo y paisaje, es el desafío que Serres ve pesar sobre nuestro destino"
-                    <footer className="text-sm mt-2 text-primary-600">
+                    <footer className="text-xs sm:text-sm mt-2 text-primary-600">
                   Gaspare Polizzi, Michel Serres: i sensi e il mondo, in Spazio e conoscenza nella costruzione dell'ambiente, a cura di Maria Bottero, Franco Angeli 1991, pp. 41-57 (53).
                 </footer>
               </blockquote>
@@ -160,11 +160,11 @@ const ColloquioItaloSpagnolo = () => {
             </section>
 
             {/* Scientific Coordinators Section */}
-            <section className="bg-white rounded-xl shadow-sm p-8">
-              <h2 className="text-2xl font-bold text-primary-900 mb-6">
+            <section className="bg-white rounded-lg sm:rounded-xl shadow-sm p-4 sm:p-8">
+              <h2 className="text-lg sm:text-2xl font-bold text-primary-900 mb-3 sm:mb-6">
                 {language === 'it' ? 'Responsabili scientifici' : 'Coordinadores científicos'}
               </h2>
-              <ul className="space-y-6">
+              <ul className="space-y-3 sm:space-y-6">
                 <li className="text-primary-900">
                   <span className="font-bold">Stefano Magnolo</span>,{' '}
                   <span className="text-primary-700">
@@ -200,11 +200,11 @@ const ColloquioItaloSpagnolo = () => {
             </section>
 
             {/* Research Units Section */}
-            <section className="bg-white rounded-xl shadow-sm p-8">
-              <h2 className="text-2xl font-bold text-primary-900 mb-6">
+            <section className="bg-white rounded-lg sm:rounded-xl shadow-sm p-4 sm:p-8">
+              <h2 className="text-lg sm:text-2xl font-bold text-primary-900 mb-3 sm:mb-6">
                 {language === 'it' ? 'Unità di ricerca coinvolte' : 'Grupos de investigación'}
               </h2>
-              <ul className="space-y-4">
+              <ul className="space-y-2 sm:space-y-4">
                 <li className="text-primary-900">
                   <span className="italic">Culture as a Good and as a Medium</span>.{' '}
                   <span className="text-primary-700">
@@ -228,25 +228,25 @@ const ColloquioItaloSpagnolo = () => {
             </section>
 
             {/* Program Schedule Section */}
-            <section className="bg-white rounded-xl shadow-sm p-8">
-              <h2 className="text-2xl font-bold text-primary-900 mb-8">
+            <section className="bg-white rounded-lg sm:rounded-xl shadow-sm p-4 sm:p-8">
+              <h2 className="text-lg sm:text-2xl font-bold text-primary-900 mb-4 sm:mb-8">
                 {language === 'it' ? 'Programma della giornata' : 'Programa del día'}
               </h2>
 
               {/* Morning Session */}
-              <div className="mb-12">
-                <h3 className="text-xl font-bold text-primary-900 mb-6">
+              <div className="mb-6 sm:mb-12">
+                <h3 className="text-base sm:text-xl font-bold text-primary-900 mb-3 sm:mb-6">
                   {language === 'it' 
                     ? 'Sessione della mattina: Sala conferenze del Rettorato (ore 10.00-13.00)'
                     : 'Sesión de la mañana: Sala de conferencias del Rectorado (10:00-13:00)'}
                 </h3>
 
-                <div className="space-y-8">
+                <div className="space-y-4 sm:space-y-8">
                   <div>
-                    <h4 className="text-lg font-medium text-primary-900 mb-4">
+                    <h4 className="text-sm sm:text-lg font-medium text-primary-900 mb-2 sm:mb-4">
                       {language === 'it' ? 'Saluti Istituzionali' : 'Saludos Institucionales'}
                     </h4>
-                    <ul className="space-y-3">
+                    <ul className="space-y-1.5 sm:space-y-3">
                       <li className="text-primary-900">
                         <span className="font-bold">Fabio Pollice</span>
                         {' – '}
@@ -272,10 +272,10 @@ const ColloquioItaloSpagnolo = () => {
                   </div>
 
                   <div>
-                    <h4 className="text-lg font-medium text-primary-900 mb-4">
+                    <h4 className="text-sm sm:text-lg font-medium text-primary-900 mb-2 sm:mb-4">
                       {language === 'it' ? 'Coordinano e presiedono' : 'Coordinan y presiden'}
                     </h4>
-                    <ul className="space-y-3">
+                    <ul className="space-y-1.5 sm:space-y-3">
                       <li className="text-primary-900">
                         <span className="font-bold">Gabriella De Giorgi Cezzi</span>
                         {' – '}<span className="font-medium">Università del Salento</span>
@@ -288,10 +288,10 @@ const ColloquioItaloSpagnolo = () => {
                   </div>
 
                   <div>
-                    <h4 className="text-lg font-medium text-primary-900 mb-4">
+                    <h4 className="text-sm sm:text-lg font-medium text-primary-900 mb-2 sm:mb-4">
                       {language === 'it' ? 'Interventi' : 'Intervenciones'}
                     </h4>
-                    <ul className="space-y-3">
+                    <ul className="space-y-1.5 sm:space-y-3">
                       <li className="text-primary-900">
                         <span className="font-bold">Mario Rosario Spasiano</span>
                         {' – '}<span className="font-medium">Università della Campania "Luigi Vanvitelli"</span>
@@ -332,23 +332,23 @@ const ColloquioItaloSpagnolo = () => {
 
               {/* Afternoon Session */}
               <div>
-                <h3 className="text-xl font-bold text-primary-900 mb-6">
+                <h3 className="text-base sm:text-xl font-bold text-primary-900 mb-3 sm:mb-6">
                   {language === 'it' 
                     ? 'Sessione del pomeriggio: Sala Conferenze del Rettorato (ore 15.00-18.00)'
                     : 'Sesión de la tarde: Sala de Conferencias del Rectorado (15:00-18:00)'}
                 </h3>
 
-                <div className="space-y-8">
+                <div className="space-y-4 sm:space-y-8">
                   <div>
-                    <h4 className="text-lg font-medium text-primary-900 mb-4">
+                    <h4 className="text-sm sm:text-lg font-medium text-primary-900 mb-2 sm:mb-4">
                       {language === 'it' ? 'Tavola rotonda' : 'Mesa redonda'}
                     </h4>
-                    <p className="text-primary-900 mb-6">
+                    <p className="text-primary-900 mb-3 sm:mb-6">
                       {language === 'it' ? 'Coordina e presiede: ' : 'Coordina y preside: '}
                       <span className="font-bold">Prof. Francesco Fabrizio Tuccari</span>
                       {' – '}<span className="font-medium">Università del Salento</span>
                     </p>
-                    <ul className="space-y-3">
+                    <ul className="space-y-1.5 sm:space-y-3">
                       <li className="text-primary-900">
                         <span className="font-bold">Anna Maria Biedermann</span>
                         {' – '}<span className="font-medium">Universidad de Zaragoza</span>
@@ -400,7 +400,7 @@ const ColloquioItaloSpagnolo = () => {
                   </div>
 
                   <div>
-                    <h4 className="text-lg font-medium text-primary-900">
+                    <h4 className="text-sm sm:text-lg font-medium text-primary-900">
                       {language === 'it' ? 'Confronto e dibattito con gli studenti' : 'Debate y discusión con los estudiantes'}
                     </h4>
                   </div>
@@ -410,17 +410,17 @@ const ColloquioItaloSpagnolo = () => {
 
             {/* Image Gallery Section */}
             <section>
-              <h2 className="text-2xl font-bold text-primary-900 mb-6">
+              <h2 className="text-lg sm:text-2xl font-bold text-primary-900 mb-3 sm:mb-6">
               {language === 'it' ? 'Immagini dell\'evento' : 'Imágenes del evento'}
               </h2>
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
-              spaceBetween={20}
+              spaceBetween={10}
               slidesPerView={1}
               navigation
               pagination={{ clickable: true }}
               autoplay={{ delay: 5000 }}
-                className="w-full h-[500px] rounded-xl overflow-hidden shadow-sm bg-gray-100"
+                className="w-full h-[250px] sm:h-[500px] rounded-lg sm:rounded-xl overflow-hidden shadow-sm bg-gray-100"
             >
               {images.map((image, index) => (
                 <SwiperSlide key={index}>

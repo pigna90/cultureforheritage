@@ -16,13 +16,17 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col text-primary-900">
       {/* Hero Section */}
-      <div className="w-full max-w-4xl mx-auto mt-12 mb-8 px-4">
+      <div className="w-full max-w-4xl mx-auto mt-6 md:mt-12 mb-4 md:mb-8 px-4">
         <section className="text-center">
-          <h1 className="text-5xl font-bold mb-2 text-primary-900">CroMe</h1>
-          <p className="text-2xl mb-3 text-primary-800">Culture as a good and as a medium</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-2 md:mb-4 text-accent-700">CroMe</h1>
+          <h2 className="text-2xl md:text-3xl font-semibold mb-3 md:mb-6 text-primary-800">Culture as a good and as a medium</h2>
           <div className="max-w-2xl mx-auto">
-            <p className="text-lg mb-2 text-primary-700 font-medium">New Categories of Heritage and Form of its Protection and Enhancement</p>
-            <p className="text-base text-primary-600 border-t border-primary-200 pt-2">Department of Legal Studies<br />Research Group on Intangible Cultural Heritage</p>
+            <h3 className="text-lg md:text-xl font-medium mb-3 md:mb-6 text-primary-700 md:whitespace-nowrap">New Categories of Heritage and Form of its Protection and Enhancement</h3>
+            <div className="text-base text-primary-600 border-t border-primary-200 pt-2 md:pt-3">
+              <p className="font-semibold leading-tight">University of Salento</p>
+              <p className="leading-tight">Department of Legal Studies</p>
+              <p className="leading-tight">Research Group on Intangible Cultural Heritage</p>
+            </div>
             <a 
               href="https://www.instagram.com/culture_for_heritage" 
               target="_blank" 
@@ -69,64 +73,30 @@ export default function Home() {
       </div>
 
       {/* News & Events Section */}
-      <div className="w-full max-w-4xl mx-auto mb-12 px-4">
-        <section className="bg-white/40 backdrop-blur-sm p-6 rounded-lg">
-          <div className="flex justify-between items-center mb-4">
+      <div className="w-full max-w-4xl mx-auto mb-8 md:mb-12 px-4">
+        <section className="bg-white/30 backdrop-blur-sm p-4 md:p-6 rounded-lg">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2 md:gap-0 mb-4">
             <h2 className="text-2xl font-bold text-primary-900">Latest News & Events</h2>
-            <Link to="/news" className="text-accent-600 hover:text-accent-700 font-medium flex items-center">
+            <Link to="/news" className="text-accent-600 hover:text-accent-700 font-medium inline-flex items-center text-base">
               View All
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
           </div>
-          <div className="space-y-4">
-            <Link to="/news/digital-tools-workshop" className="block hover:bg-white/40 transition-colors rounded-lg p-4">
-              <article className="border-l-4 border-accent-400 pl-4">
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="px-2 py-1 text-xs font-medium bg-accent-100 text-accent-700 rounded">Workshop</span>
-                  <p className="text-sm text-primary-600">March 15, 2024</p>
-                </div>
-                <h3 className="font-bold text-primary-900 text-lg mb-2">Upcoming Workshop: Digital Tools for Heritage Conservation</h3>
-                <p className="text-primary-700 line-clamp-2 mb-3">Join us for a hands-on workshop exploring the latest digital tools in heritage conservation.</p>
-                <div className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium">
-                  Read more
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
+          <div className="space-y-3 md:space-y-4">
+            <Link to="/" className="block hover:bg-white/40 transition-colors rounded-lg">
+              <article className="border-l-2 border-accent-400 pl-3 md:pl-4 py-2">
+                <p className="text-sm md:text-sm text-primary-600 mb-1">April 10, 2025</p>
+                <h3 className="font-bold text-primary-900 text-lg md:text-lg mb-1">New website online</h3>
+                <p className="text-base md:text-base text-primary-700 line-clamp-2">We are excited to announce the launch of our new website, designed to better serve our community and showcase our work in cultural heritage preservation.</p>
               </article>
             </Link>
-            <Link to="/news/research-publication" className="block hover:bg-white/40 transition-colors rounded-lg p-4">
-              <article className="border-l-4 border-accent-400 pl-4">
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="px-2 py-1 text-xs font-medium bg-accent-100 text-accent-700 rounded">Research</span>
-                  <p className="text-sm text-primary-600">February 28, 2024</p>
-                </div>
-                <h3 className="font-bold text-primary-900 text-lg mb-2">New Research Publication</h3>
-                <p className="text-primary-700 line-clamp-2 mb-3">Our team's latest research on sustainable preservation methods has been published.</p>
-                <div className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium">
-                  Read more
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </article>
-            </Link>
-            <Link to="/news/innovation-grant" className="block hover:bg-white/40 transition-colors rounded-lg p-4">
-              <article className="border-l-4 border-accent-400 pl-4">
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="px-2 py-1 text-xs font-medium bg-accent-100 text-accent-700 rounded">Grant</span>
-                  <p className="text-sm text-primary-600">February 15, 2024</p>
-                </div>
-                <h3 className="font-bold text-primary-900 text-lg mb-2">Cultural Heritage Innovation Grant Awarded</h3>
-                <p className="text-primary-700 line-clamp-2 mb-3">Our research unit has been awarded a major grant to develop innovative methods for digital heritage preservation.</p>
-                <div className="inline-flex items-center text-accent-600 hover:text-accent-700 font-medium">
-                  Read more
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
+            <Link to="/colloquio-italo-spagnolo" className="block hover:bg-white/40 transition-colors rounded-lg">
+              <article className="border-l-2 border-accent-400 pl-3 md:pl-4 py-2">
+                <p className="text-sm md:text-sm text-primary-600 mb-1">May 20, 2024</p>
+                <h3 className="font-bold text-primary-900 text-lg md:text-lg mb-1">Colloquio italo-spagnolo</h3>
+                <p className="text-base md:text-base text-primary-700 line-clamp-2">Join us for an important cultural exchange event between Italian and Spanish heritage institutions.</p>
               </article>
             </Link>
           </div>

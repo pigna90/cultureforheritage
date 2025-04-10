@@ -1,16 +1,16 @@
 export default function News() {
   const news = [
     {
-      title: "New Research Publication on Sustainable Preservation",
-      date: "February 28, 2024",
-      description: "Our team's latest research on sustainable preservation methods has been published in the International Journal of Heritage Studies.",
-      link: "https://example.com/publication"
+      title: "New website online",
+      date: "April 10, 2025",
+      description: "We are excited to announce the launch of our new website, designed to better serve our community and showcase our work in cultural heritage preservation.",
+      link: "/"
     },
     {
-      title: "Cultural Heritage Innovation Grant Awarded",
-      date: "February 15, 2024",
-      description: "Our research unit has been awarded a major grant to develop innovative methods for digital heritage preservation.",
-      link: "https://example.com/grant"
+      title: "Colloquio italo-spagnolo",
+      date: "May 20, 2024",
+      description: "Join us for an important cultural exchange event between Italian and Spanish heritage institutions.",
+      link: "/colloquio-italo-spagnolo"
     }
   ];
 
