@@ -18,7 +18,22 @@
         }
       }(window.location))
     </script>
+    <script type="text/javascript">
+      // Handle direct navigation to routes
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </head>
   <body>
+    <script type="text/javascript">
+      // Store the current URL and redirect to index.html
+      sessionStorage.redirect = location.href;
+      location.href = '/';
+    </script>
   </body>
 </html> 
