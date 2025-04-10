@@ -92,7 +92,7 @@ export default function Home() {
                 <p className="text-base md:text-base text-primary-700 line-clamp-2">We are excited to announce the launch of our new website, designed to better serve our community and showcase our work in cultural heritage preservation.</p>
               </article>
             </Link>
-            <Link to="/colloquio-italo-spagnolo" className="block hover:bg-white/40 transition-colors rounded-lg">
+            <Link to="/activities/colloquio-italo-spagnolo" className="block hover:bg-white/40 transition-colors rounded-lg">
               <article className="border-l-2 border-accent-400 pl-3 md:pl-4 py-2">
                 <p className="text-sm md:text-sm text-primary-600 mb-1">May 20, 2024</p>
                 <h3 className="font-bold text-primary-900 text-lg md:text-lg mb-1">Colloquio italo-spagnolo</h3>

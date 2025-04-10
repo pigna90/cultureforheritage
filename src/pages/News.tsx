@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function News() {
   const news = [
     {
@@ -10,7 +12,7 @@ export default function News() {
       title: "Colloquio italo-spagnolo",
       date: "May 20, 2024",
       description: "Join us for an important cultural exchange event between Italian and Spanish heritage institutions.",
-      link: "/colloquio-italo-spagnolo"
+      link: "/activities/colloquio-italo-spagnolo"
     }
   ];
 
@@ -28,14 +30,12 @@ export default function News() {
             <h2 className="text-2xl font-bold text-primary-900 mb-2">{item.title}</h2>
             <p className="text-sm text-primary-600 mb-4">{item.date}</p>
             <p className="mb-4 text-primary-900">{item.description}</p>
-            <a 
-              href={item.link} 
+            <Link 
+              to={item.link}
               className="text-accent-600 hover:text-accent-700 font-medium"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               More →
-            </a>
+            </Link>
           </div>
         ))}
       </div>

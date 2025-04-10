@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Project from './pages/Project';
@@ -11,7 +11,7 @@ import ColloquioItaloSpagnolo from './pages/activities/ColloquioItaloSpagnolo';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="min-h-screen bg-gradient-to-br from-primary-100 via-secondary-200 to-primary-200">
         <div className="fixed inset-0 bg-gradient-to-b from-white/20 to-white/40 backdrop-blur-sm" />
         <div className="relative">
